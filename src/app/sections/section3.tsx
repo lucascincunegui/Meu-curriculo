@@ -1,11 +1,11 @@
 import { DiJavascript1 } from "react-icons/di";
-import { FaGithub, FaReact } from "react-icons/fa";
+import { FaFigma, FaGithub, FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 
 export default function Section3() {
   return (
     <section className="section">
-      <h1>Conhecimentos</h1>
+      <h1 className="h1">Conhecimentos</h1>
 
       <ul className="ul">
         <div className="li-div">
@@ -27,6 +27,10 @@ export default function Section3() {
         <div className="li-div">
           <FaReact className="li-icon" size={28} style={{ color: "#087ea4" }} />
           <li className="li">React</li>
+        </div>
+        <div className="li-div">
+          <FaFigma className="li-icon" size={25} style={{ color: "#1e1e1e" }} />
+          <li className="li">Figma</li>
         </div>
         <div className="li-div">
           <li className="li">

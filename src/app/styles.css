@@ -117,6 +117,7 @@ body {
   margin: 10px;
   padding: 10px 0px;
   transition: all 0.2s ease;
+  background-color: #e7e7e73b;
 }
 
 /* .section:hover {
@@ -144,9 +145,15 @@ body {
   font-size: 15px;
   line-height: 1.5;
   padding-top: 20px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
   width: 80%;
   height: 100%;
   list-style: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .li {
@@ -179,7 +186,6 @@ body {
   font-weight: 600;
   cursor: pointer;
   position: relative;
-  padding: 10px;
   overflow: hidden;
 }
 .li-animated span {
@@ -211,4 +217,29 @@ body {
   cursor: pointer;
   font-size: 12px;
   color: inherit;
+}
+
+.button {
+  background-color: #e7e7e73b;
+  border: solid gray 1px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.button:hover {
+  transition: 0.2s;
+  scale: 1.02;
+  cursor: pointer;
+}
+
+.div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  cursor: pointer;
 }
