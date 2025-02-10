@@ -1,12 +1,10 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Section4() {
   return (
-    <section className="section">
-      <h1>Meu contato</h1>
-
-      <ul className="ul">
-        <li className="div-contact">
+    <div className="div-section-4">
+      <div className="div">
+        <button className="button">
           <Image
             alt="iconGmail"
             width={18}
@@ -17,8 +15,12 @@ export default function Section4() {
           <a href="mailto:lucascincunegui@gmail.com" className="a">
             lucascincunegui@gmail.com
           </a>
-        </li>
-      </ul>
-    </section>
+        </button>
+
+        <button className="button">
+          <Link href={"/curriculo_lucas_cincunegui.pdf"}>Ver Curriculo</Link>
+        </button>
+      </div>
+    </div>
   );
 }
