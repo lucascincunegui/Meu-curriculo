@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { DiJavascript1 } from "react-icons/di";
-import { FaGithub, FaReact } from "react-icons/fa";
+import { FaFigma, FaGithub, FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 
 export default function Section3() {
@@ -29,7 +29,7 @@ export default function Section3() {
           <FaReact className="li-icon" size={28} style={{ color: "#087ea4" }} />
           <li className="li">React</li>
         </div>
-        <div className="li-div">
+ <div className="li-div">
           <Image
             className="li-icon"
             alt="iconFigma"
