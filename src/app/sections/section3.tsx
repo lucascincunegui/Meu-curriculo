@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { DiJavascript1 } from "react-icons/di";
 import { FaFigma, FaGithub, FaReact } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
@@ -28,8 +29,14 @@ export default function Section3() {
           <FaReact className="li-icon" size={28} style={{ color: "#087ea4" }} />
           <li className="li">React</li>
         </div>
-        <div className="li-div">
-          <FaFigma className="li-icon" size={25} style={{ color: "#1e1e1e" }} />
+ <div className="li-div">
+          <Image
+            className="li-icon"
+            alt="iconFigma"
+            width={20}
+            height={25}
+            src="/figma.png"
+          />
           <li className="li">Figma</li>
         </div>
         <div className="li-div">

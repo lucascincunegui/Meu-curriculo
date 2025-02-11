@@ -1,6 +1,4 @@
 import "./styles.css";
-import { FaReact } from "react-icons/fa";
-import { DiJavascript1 } from "react-icons/di";
 import Section1 from "./sections/section1";
 import Section2 from "./sections/section2";
 import Section3 from "./sections/section3";
@@ -14,22 +12,19 @@ export default function Home() {
             <h1 className="title">
               Olá, sou <span className="inline">Lucas Cincunegui</span>
             </h1>
-            <small className="padding">Front-End Developer</small>
-            <span className="padding">
-              <FaReact style={{ color: "#087ea4" }} />
-              <DiJavascript1 style={{ color: "#ffd600" }} />
-            </span>
+            <div className="wrapper">
+              <small className="typing-demo">Front End Developer</small>
+            </div>
           </div>
         </section>
+        <Section4 />
       </div>
       <div className="flexBox">
-        <Section2 />
-
         <Section3 />
 
         <Section1 />
 
-        <Section4 />
+        <Section2 />
       </div>
     </main>
   );

@@ -1,26 +1,28 @@
 import Image from "next/image";
-import Link from "next/link";
+
+import { FaRegFilePdf } from "react-icons/fa6";
 export default function Section4() {
   return (
-    <div className="div-section-4">
-      <div className="div">
-        <button className="button">
-          <Image
-            alt="iconGmail"
-            width={18}
-            height={18}
-            src="/gmail.png"
-            className="li-icon-contact"
-          />
-          <a href="mailto:lucascincunegui@gmail.com" className="a">
-            lucascincunegui@gmail.com
-          </a>
-        </button>
+    <div className="div-btn">
+      <button className="btn">
+        <FaRegFilePdf style={{ marginRight: 10, width: 20, height: 20 }} />
 
-        <button className="button">
-          <Link href={"/curriculo_lucas_cincunegui.pdf"}>Ver Curriculo</Link>
-        </button>
-      </div>
+        <a href="/curriculo_lucas_cincunegui.pdf" className="a">
+          Ver Curriculo
+        </a>
+      </button>
+      <button className="btn">
+        <Image
+          alt="iconGmail"
+          width={20}
+          height={20}
+          src="/gmail.png"
+          className="li-icon-contact"
+        />
+        <a href="mailto:lucascincunegui@gmail.com" className="a">
+          lucascincunegui@gmail.com
+        </a>
+      </button>
     </div>
   );
 }
