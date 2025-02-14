@@ -13,7 +13,9 @@ export default function Home() {
               Olá, sou <span className="inline">Lucas Cincunegui</span>
             </h1>
             <div className="wrapper">
-              <small className="typing-demo">Front End Developer</small>
+              <small className="typing-demo">
+                Front End Developer 💻 🎨 ✌️
+              </small>
             </div>
           </div>
         </section>
