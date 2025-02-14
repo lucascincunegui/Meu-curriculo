@@ -9,9 +9,9 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-weight: 600;
+  padding: 0px;
+  margin: 0px;
+  font-weight: 600px;
   font-family: monospace;
 }
 
@@ -28,11 +28,9 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   min-height: 100vh;
-  gap: 20px;
-  padding: 10px 0px 0px 0px;
   color: #252525;
 }
 
@@ -41,15 +39,8 @@ body {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  height: 170px;
   justify-content: space-around;
-}
-
-.div-contact {
-  position: absolute;
-  top: 18%;
-  right: 5%;
-  display: flex;
-  align-items: center;
 }
 
 .li-icon-contact {
@@ -116,7 +107,6 @@ body {
   border-radius: 10px;
   width: 30%;
   margin: 10px;
-  padding: 10px 0px;
   transition: all 0.2s ease;
 }
 
@@ -148,6 +138,42 @@ body {
   width: 80%;
   height: 100%;
   list-style: none;
+}
+
+.ul-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  width: 100%;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(180, 180, 180);
+  border-radius: 10px;
+}
+
+.li-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.li-skills:hover {
+  scale: 1.1;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .li {
@@ -249,9 +275,8 @@ body {
 }
 
 .typing-demo {
-  width: 20ch;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
-  animation-delay: 1s;
+  width: 32ch;
+  animation: typing 2s steps(22) infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
@@ -269,3 +294,5 @@ body {
     border-color: transparent;
   }
 }
+
+/* ----------------------         TEXT TYPING       -----------------------------  */
