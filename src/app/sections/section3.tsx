@@ -25,7 +25,7 @@ export default function Section3() {
         <div className="li-skills">
           <SiTypescript
             className="li-icon"
-            size={25}
+            size={24}
             style={{ color: "#2f82cf" }}
           />
           <li className="li">Typescript</li>
@@ -54,8 +54,18 @@ export default function Section3() {
           </li>
         </div>
         <div className="li-skills">
-          <SiJira className="li-icon" size={28} style={{ color: "#1868db" }} />
+          <SiJira className="li-icon" size={26} style={{ color: "#1868db" }} />
           <li className="li">Jira</li>
+        </div>
+        <div className="li-skills">
+          <Image
+            className="li-icon"
+            alt="iconTawkTo"
+            width={33}
+            height={30}
+            src="/tawkTo.png"
+          />
+          <li className="li">Tawk.To</li>
         </div>
       </ul>
     </section>

@@ -6,7 +6,7 @@ export default function Section1() {
   return (
     <section className="section">
       <h1 className="h1">Experiência profissional</h1>
-      <ul className="ul">
+      <ul className="ul-xp">
         <li className="li">
           <Popover
             content={
