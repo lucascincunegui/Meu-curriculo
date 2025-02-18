@@ -21,10 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-.padding {
-  padding: 10px;
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -50,7 +46,10 @@ body {
 .flexBox {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   flex-flow: row wrap;
+  height: 50%;
+  gap: 10px;
 }
 
 .footer {
@@ -69,6 +68,8 @@ body {
   align-items: center;
 }
 
+/* ----------------------         TITLE GRADIENT       -----------------------------  */
+
 .div {
   display: flex;
   flex-direction: column;
@@ -79,20 +80,31 @@ body {
 .inline {
   font-weight: bold;
   font-size: 30px;
-  background: -webkit-linear-gradient(
-    75deg,
-    #7a00c6 8%,
-    rgb(255, 102, 0) 88%,
-    #0cab01 4%
-  );
+  background: linear-gradient(25deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: mygradient 60s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes mygradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .title {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 10px;
 }
+
+/* --------------------------------------------------------------------------------  */
 
 .p {
   margin-top: 10px;
@@ -106,14 +118,9 @@ body {
   justify-content: flex-start;
   border-radius: 10px;
   width: 30%;
-  margin: 10px;
+  height: 250px;
   transition: all 0.2s ease;
 }
-
-/* .section:hover {
-  scale: 1.02;
-  box-shadow: 0px 0px 20px rgba(92, 0, 149, 0.3);
-} */
 
 .img {
   background-color: #b4b4b4;
@@ -140,6 +147,18 @@ body {
   list-style: none;
 }
 
+.ul-xp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 15px;
+  line-height: 1.5;
+  padding-top: 20px;
+  width: 80%;
+  height: 100%;
+  list-style: none;
+}
+
 .ul-skills {
   display: flex;
   flex-direction: column;
@@ -149,8 +168,10 @@ body {
   overflow: scroll;
 }
 
+/* ----------------------         SCROLLBAR       -----------------------------  */
+
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background-color: transparent;
@@ -161,13 +182,14 @@ body {
   border-radius: 10px;
 }
 
+/* --------------------------------------------------------------------------------  */
+
 .li-skills {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 50%;
-  cursor: pointer;
   transition: 0.2s;
 }
 .li-skills:hover {
@@ -181,6 +203,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin: 15px 0px;
+  cursor: default;
 }
 
 .li-div:hover {
@@ -193,44 +216,10 @@ body {
   flex-direction: row;
   align-items: center;
   width: 50%;
-  cursor: pointer;
 }
 
 .li-icon {
   margin-right: 20px;
-}
-
-.li-animated {
-  width: 250px;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  position: relative;
-  padding: 10px;
-  overflow: hidden;
-}
-.li-animated span {
-  position: absolute;
-  display: block;
-}
-
-.li-animated span:nth-child(1) {
-  height: 2px;
-  width: 100px;
-  right: -100px;
-  bottom: 0px;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), #0cab01);
-  animation: span1 8s linear infinite;
-  animation-delay: 3s;
-  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-@keyframes span1 {
-  0% {
-    left: -200px;
-  }
-  100% {
-    left: 400px;
-  }
 }
 
 .a {
@@ -268,31 +257,91 @@ body {
 
 /* ----------------------         TEXT TYPING       -----------------------------  */
 
-.wrapper {
+.txt-animado {
+  font-size: 22px;
+  width: 100%;
   height: 30px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.typing-demo {
-  width: 32ch;
-  animation: typing 2s steps(22) infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-size: 22px;
+.txt-animado span {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.txt-animado span::before {
+  content: "";
+  animation: palavras 30s infinite;
+}
+
+.txt-animado span::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: solid 1px black;
+  right: -10px;
+  width: calc(100% + 10px);
+  animation: blink 1s infinite, typing 30s steps(15) infinite;
+  background-color: white;
+}
+
+@keyframes palavras {
+  0%,
+  20% {
+    content: "Front End 🎨";
+  }
+  21%,
+  40% {
+    content: "Student 💻📚";
+  }
+  41%,
+  60% {
+    content: "I’m 22 ✌️";
+  }
+  61%,
+  80% {
+    content: "Theology 📖";
+  }
+  81%,
+  100% {
+    content: "Loading...";
+  }
 }
 
 @keyframes typing {
-  from {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
     width: 0;
+  }
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 10px);
   }
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
+  0% {
+    border-left: solid 1px white;
   }
 }
 
-/* ----------------------         TEXT TYPING       -----------------------------  */
+/* --------------------------------------------------------------------------------  */

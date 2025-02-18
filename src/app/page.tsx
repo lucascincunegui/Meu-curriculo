@@ -12,10 +12,8 @@ export default function Home() {
             <h1 className="title">
               Olá, sou <span className="inline">Lucas Cincunegui</span>
             </h1>
-            <div className="wrapper">
-              <small className="typing-demo">
-                Front End Developer 💻 🎨 ✌️
-              </small>
+            <div className="txt-animado">
+              <span></span>
             </div>
           </div>
         </section>

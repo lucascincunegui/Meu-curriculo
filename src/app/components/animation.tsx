@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Animation({ children }: any) {
   return (
-    <div className="li-animated">
-      <h3>
+    <div>
+      <p>
         {children}
         <span></span>
-      </h3>
+      </p>
     </div>
   );
 }
