@@ -7,16 +7,14 @@ export default function Home() {
   return (
     <main className="main">
       <div className="header">
-        <section className="profile">
-          <div className="div">
-            <h1 className="title">
-              Olá, sou <span className="inline">Lucas Cincunegui</span>
-            </h1>
-            <div className="txt-animado">
-              <span></span>
-            </div>
+        <div className="div">
+          <h1 className="title">
+            Olá, sou <span className="inline">Lucas Cincunegui</span>
+          </h1>
+          <div className="txt-animado">
+            <span></span>
           </div>
-        </section>
+        </div>
         <Section4 />
       </div>
       <div className="flexBox">
