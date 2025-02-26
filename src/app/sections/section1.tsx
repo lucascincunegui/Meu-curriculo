@@ -10,7 +10,7 @@ export default function Section1() {
         <li className="li">
           <Popover
             content={
-              <p style={{ display: "flex", maxWidth: 400 }}>
+              <p>
                 Neste emprego aprendi a lidar com o cliente, compreendendo o
                 problema apresentado e endereçando-o de forma ágil, cortês, e
                 objetiva.
@@ -31,9 +31,7 @@ export default function Section1() {
         <li className="li">
           <Popover
             content={
-              <p style={{ display: "flex", maxWidth: 400 }}>
-                Atualmente trabalho como balconista na Panvel Farmacias.
-              </p>
+              <p>Atualmente trabalho como balconista na Panvel Farmacias.</p>
             }
             title={
               <Image

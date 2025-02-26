@@ -2,22 +2,21 @@ import "./styles.css";
 import Section1 from "./sections/section1";
 import Section2 from "./sections/section2";
 import Section3 from "./sections/section3";
-import Section4 from "./sections/section4";
+import Nav from "./components/nav";
+import TextTyping from "./components/textTyping";
 export default function Home() {
   return (
     <main className="main">
-      <div className="header">
-        <div className="div">
+      <header className="header">
+        <div className="profile">
           <h1 className="title">
             Olá, sou <span className="inline">Lucas Cincunegui</span>
           </h1>
-          <div className="txt-animado">
-            <span></span>
-          </div>
+          <TextTyping />
         </div>
-        <Section4 />
-      </div>
-      <div className="flexBox">
+        <Nav />
+      </header>
+      <div className="grid">
         <Section3 />
 
         <Section1 />
