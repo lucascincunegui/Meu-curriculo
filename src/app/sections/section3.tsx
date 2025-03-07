@@ -42,16 +42,8 @@ export default function Section3() {
           <span className="li">Figma</span>
         </li>
         <li className="li-skills">
-          <span className="li">
-            <FaGithub size={28} className="li-icon" />
-            <a
-              target="_blank"
-              style={{ textDecoration: "none", color: "inherit" }}
-              href="https://github.com/lucascincunegui?tab=repositories"
-            >
-              Github
-            </a>
-          </span>
+          <FaGithub size={28} className="li-icon" />
+          <span className="li">Github</span>
         </li>
         <li className="li-skills">
           <SiJira className="li-icon" size={26} style={{ color: "#1868db" }} />
