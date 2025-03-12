@@ -4,9 +4,12 @@ import { useLayoutEffect, useRef } from "react";
 
 export default function Nav() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  let show = true;
 
   const toggle = () => {
-    sectionRef.current?.classList.toggle("on");
+    sectionRef.current?.classList.toggle("on", show);
+    document.body.style.overflow = show ? "hidden" : "initial";
+    show = !show;
   };
 
   useLayoutEffect(() => {
